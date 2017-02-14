@@ -169,3 +169,6 @@ WebServer:
 
 
 ### Check credential files
+
+- `~/credentials.txt`
+- `/home/rails/credentials.txt`
