@@ -13,6 +13,9 @@
 uname -srm
 cat /etc/*-release
 
+# SSH Authentication by Password - yes
+sed -i 's/^PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+
 # VERSIONS
 
 NODE_VERSION=7
