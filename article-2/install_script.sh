@@ -323,3 +323,9 @@ ifconfig eth0 | grep inet | awk "{print $2}" | sed "s/addr://" >> /home/rails/cr
 
 cat ~/credentials.txt
 cat /home/rails/credentials.txt
+
+### LETS ENCRIPT
+
+apt-get install -y letsencrypt -t jessie-backports
+
+apt-get install -y tree
