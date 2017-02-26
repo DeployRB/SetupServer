@@ -132,7 +132,7 @@ apt-get install -y sudo screen dialog apt-transport-https ca-certificates \
   man-db deborphan aptitude bc bash-completion command-not-found \
   python-software-properties htop nmon iotop dstat vnstat unzip zip unar pigz \
   p7zip-full logrotate wget curl w3m lftp rsync openssh-server telnet nano mc \
-  pv less sysstat ncdu ethtool dnsutils mtr-tiny rkhunter ntpdate ntp vim
+  pv less sysstat ncdu ethtool dnsutils mtr-tiny rkhunter ntpdate ntp vim tree
 
 # REQUIREMENTS LIBS
 
@@ -147,6 +147,10 @@ echo 'deb http://apt.newrelic.com/debian/ newrelic non-free' | tee /etc/apt/sour
 wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -
 apt-get update
 apt-get install -y newrelic-sysmond
+
+### LETS ENCRIPT
+
+apt-get install -y letsencrypt -t jessie-backports
 
 # IMAGE OPTIMIZERS
 
@@ -323,9 +327,3 @@ ifconfig eth0 | grep inet | awk "{print $2}" | sed "s/addr://" >> /home/rails/cr
 
 cat ~/credentials.txt
 cat /home/rails/credentials.txt
-
-### LETS ENCRIPT
-
-apt-get install -y letsencrypt -t jessie-backports
-
-apt-get install -y tree
