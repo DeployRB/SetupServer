@@ -154,7 +154,7 @@ apt-get install -y letsencrypt -t jessie-backports
 
 # IMAGE OPTIMIZERS
 
-apt-get install -y gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
+apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
 
 cd /tmp/
 
