@@ -172,6 +172,8 @@ cd pngcrush-1.8.11
 make pngcrush
 cp /tmp/pngcrush-1.8.11/pngcrush /usr/local/bin/pngcrush
 
+rm -rf ./pngcrush-1.8.11
+cd ~
 
 # PNGOUT
 cd /tmp/
