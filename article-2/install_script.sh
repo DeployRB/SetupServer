@@ -152,6 +152,12 @@ apt-get install -y newrelic-sysmond
 
 apt-get install -y letsencrypt -t jessie-backports
 
+# NODE
+# https://github.com/nodesource/distributions
+
+curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
+apt-get install -y nodejs
+
 # IMAGE OPTIMIZERS
 
 apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
@@ -165,16 +171,11 @@ cp /tmp/pngout-20150319-linux/x86_64/pngout /usr/local/bin/pngout
 rm -rf ./pngout-20150319*
 cd ~
 
+npm install -g svgo
 # IMAGE MAGICK
 
 apt-get install -y imagemagick libmagickwand-dev
 convert --version
-
-# NODE
-# https://github.com/nodesource/distributions
-
-curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
-apt-get install -y nodejs
 
 # REDIS
 
