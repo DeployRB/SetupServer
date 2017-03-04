@@ -160,8 +160,20 @@ apt-get install -y nodejs
 
 # IMAGE OPTIMIZERS
 
-apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngcrush pngquant
+apt-get install -y advancecomp gifsicle jhead jpegoptim libjpeg-progs optipng pngquant
 
+# PNGCRUSH. SEE FAILED BINS LIST
+# http://www.rubydoc.info/gems/image_optim/ImageOptim/BinResolver/Bin
+cd /tmp/
+
+wget https://netcologne.dl.sourceforge.net/project/pmt/pngcrush/1.8.11/pngcrush-1.8.11.tar.gz
+tar -xvf pngcrush-1.8.11.tar.gz
+cd pngcrush-1.8.11
+make pngcrush
+cp /tmp/pngcrush-1.8.11/pngcrush /usr/local/bin/pngcrush
+
+
+# PNGOUT
 cd /tmp/
 
 wget http://static.jonof.id.au/dl/kenutils/pngout-20150319-linux.tar.gz
@@ -171,7 +183,9 @@ cp /tmp/pngout-20150319-linux/x86_64/pngout /usr/local/bin/pngout
 rm -rf ./pngout-20150319*
 cd ~
 
+# SVGO
 npm install -g svgo
+
 # IMAGE MAGICK
 
 apt-get install -y imagemagick libmagickwand-dev
@@ -328,3 +342,6 @@ ifconfig eth0 | grep inet | awk "{print $2}" | sed "s/addr://" >> /home/rails/cr
 
 cat ~/credentials.txt
 cat /home/rails/credentials.txt
+
+# NOTES:
+# checkinstall -y
