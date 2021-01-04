@@ -45,6 +45,7 @@ Visit your server `ssh root@257.123.45.67`
 Install TMUX
 
 ```sh
+apt update
 apt-get install tmux -y
 ```
 
